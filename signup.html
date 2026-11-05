@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Bintang Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0b0c10;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            display: block;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            padding: 2rem 0;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 65%);
+            top: -10%;
+            right: -10%;
+            z-index: 0;
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(102, 252, 241, 0.08) 0%, transparent 70%);
+            bottom: -5%;
+            left: -5%;
+            z-index: 0;
+        }
+        .glass-card {
+            background: rgba(20, 24, 32, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            width: 100%;
+            max-width: 480px;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            margin: auto;
+            position: relative;
+        }
+        .brand-logo {
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        .brand-logo span {
+            color: #38bdf8;
+        }
+        .header-area {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header-area h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+        .header-area p {
+            color: #c5c6c7;
+            font-size: 0.9rem;
+        }
+        .row-inputs {
+            gap: 15px;
+            display: flex;
+        }
+        .input-group {
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+        .input-group label {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px 14px;
+            background: rgba(11, 12, 16, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #38bdf8;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+        }
+        .checkbox-terms {
+            display: block;
+            font-size: 0.85rem;
+            color: #c5c6c7;
+            margin: 1.5rem 0;
+            line-height: 1.4;
+        }
+        .checkbox-terms input {
+            margin-right: 0.6rem;
+            vertical-align: middle;
+        }
+        .checkbox-terms label {
+            vertical-align: middle;
+        }
+        .checkbox-terms a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .btn-action {
+            width: 100%;
+            padding: 14px;
+            background: #38bdf8;
+            color: #0b0c10;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: block;
+        }
+        .btn-action:hover {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+            transform: translateY(-1px);
+        }
+        .footer-link {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #c5c6c7;
+        }
+        .footer-link a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .error-message {
+            color: #ef4444;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+        .input-group input.error-border {
+            border-color: #ef4444;
+        }
+        @media (max-width: 600px) {
+            .glass-card {
+                padding: 2rem 1.5rem;
+                margin: 1rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glass-card">
+        <div class="brand-logo">Bintang<span>.</span>ANF</div>
+        <div class="header-area">
+            <h1>Create Account</h1>
+            <p>Join the next generation development hub.</p>
+        </div>
+        <form id="signup-form">
+            <div class="row-inputs">
+                <div class="input-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="Alex" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Morgan" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="name@domain.com" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Min. 8 characters" required>
+            </div>
+            <div class="checkbox-terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+            </div>
+            <button type="submit" class="btn-action">Register Account</button>
+        </form>
+        <div class="footer-link">
+            Already have an account? <a href="signin.html">Sign In</a>
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector('#signup-form');
+        const emailInput = document.querySelector('#email');
+        const passwordInput = document.querySelector('#password');
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+        function showError(inputElement, message) {
+            const parent = inputElement.parentElement;
+            const oldError = parent.querySelector('.error-message');
+            if (oldError) oldError.remove();
+            inputElement.classList.add('error-border');
+            const errorDiv = document.createElement('span');
+            errorDiv.className = 'error-message';
+            errorDiv.innerText = message;
+            parent.appendChild(errorDiv);
+        }
+        function clearError(inputElement) {
+            inputElement.classList.remove('error-border');
+            const parent = inputElement.parentElement;
+            const oldError = parent.querySelector('.error-message');
+            if (oldError) oldError.remove();
+        }
+        emailInput.addEventListener('input', () => clearError(emailInput));
+        passwordInput.addEventListener('input', () => clearError(passwordInput));
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let isValid = true;
+            if (!validateEmail(emailInput.value)) {
+                showError(emailInput, 'Wrong email form!');
+                isValid = false;
+            }
+            if (passwordInput.value.length < 8) {
+                showError(passwordInput, 'At least fill 8 caracter.');
+                isValid = false;
+            }
+            if (isValid) {
+                alert('Sign Up success!');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bin Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">Bintang <span>.</span> A.N.F</a>
+    
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+      <li class="auth-group">
+        <button id="theme-toggle" aria-label="Toggle theme" class="theme-toggle-btn">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.72" x2="5.64" y2="18.30"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="signin.html" class="btn-sign sign-in">Sign In</a>
+        <a href="signup.html" class="btn-sign sign-up">Sign Up</a>
+      </li>
+    </ul>
+
+    <div class="nav-hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="#home"     onclick="closeMobileMenu()">Home</a>
+    <a href="#about"     onclick="closeMobileMenu()">About</a>
+    <a href="#work"     onclick="closeMobileMenu()">Work</a>
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#contact"  onclick="closeMobileMenu()" class="nav-cta">Contact</a>
+    <div class="mobile-auth" style="display: flex; gap: 10px; margin-top: 15px;">
+      <a href="signin.html" class="btn-sign sign-in" style="font-size: 14px;">Sign In</a>
+      <a href="signup.html" class="btn-sign sign-up" style="font-size: 14px;">Sign Up</a>
+    </div>
+  </div>
+
+  <section id="home">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            Available for new projects
+          </div>
+          <h1 class="hero-name">Hi, I'm <span class="accent-text">Bintang</span></h1>
+          <div class="hero-typing-wrap">
+            <span class="hero-typing-prefix">//</span>
+            <span id="typing-text"></span><span class="cursor-blink"></span>
+          </div>
+          <div class="hero-actions">
+            <a href="#work" class="btn-primary">
+              View My Work
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn-ghost">Let's Talk</a>
+          </div>
+          <div class="hero-socials">
+            <span class="hero-socials-label">Follow</span>
+            <a href="https://github.com/Bintangnuma" class="hero-social-link" aria-label="GitHub" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+            </a>
+            <a href="https://instagram.com/bintanganf1411" class="hero-social-link" aria-label="Instagram" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            
+            <a href="https://tiktok.com/@binanf1411" class="hero-social-link" aria-label="TikTok" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.03 1.64 4.14.99.98 2.33 1.57 3.72 1.68v3.91c-1.3-.12-2.52-.66-3.49-1.5-.54-.47-.98-1.05-1.32-1.7-.08 2.47-.04 4.94-.06 7.41-.05 1.57-.49 3.16-1.39 4.45-.96 1.34-2.43 2.3-4.04 2.65-1.42.32-2.94.19-4.28-.41-1.45-.64-2.66-1.83-3.28-3.29-.68-1.53-.74-3.32-.22-4.88.51-1.57 1.63-2.95 3.11-3.69 1.05-.53 2.23-.74 3.4-.64v3.98c-.76-.08-1.54.12-2.16.58-.69.49-1.12 1.28-1.15 2.13-.04.98.5 1.93 1.37 2.37.71.37 1.56.4 2.31.11.79-.29 1.39-.98 1.57-1.8.08-.43.08-.87.08-1.3V.02z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-avatar-ring">
+            <div class="hero-avatar">
+              <img src="static/img/me.jpg" alt="Bintang Aqilla — Database Enthusiast" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="stats-bar">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="num" data-target="50">0</div>
+            <div class="label">Projects Shipped</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="num" data-target="3">0</div>
+            <div class="label">Years of Practice</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="num" data-target="12">0</div>
+            <div class="label">Awards & Recognition</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+        
+        <div class="about-visual reveal">
+          <div class="about-img-box">
+            <img src="static/img/me2.jpg" alt="Bintang Aqilla" />
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-delay-1">
+          <div class="section-eyebrow">About Me</div>
+          <h2 class="section-title">Get to Know Me Better</h2>
+          <p class="about-text reveal">
+            Hi, I'm <strong>Bintang Aqilla Nu'ma Fridayan</strong>. I am a passionate Developer and Database Enthusiast who loves creating sleek, high-performing, and functional web applications. 
+          </p>
+          <p class="about-text">
+            With a strong focus on modern frontend technologies and database management, I enjoy solving complex structural challenges and turning them into smooth user experiences.
+          </p>
+          <p class="about-text">
+            My creativity doesn't just stop at coding. Outside the digital world, I am also a violinist. For me, playing music and structuring frontend code or databases share a beautiful connection—both require intense precision, aesthetics, and perfect balance to create a masterpiece.
+          </p>
+          <div class="about-badges reveal">
+            <span class="badge">HTML / CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Python</span>
+            <span class="badge">MySql</span>
+            <span class="badge">C++</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="work-header">
+        <div>
+          <div class="section-eyebrow reveal">Selected Work</div>
+          <h2 class="section-title reveal reveal-delay-1">Stuff I've built<br>So Far 🚀</h2>
+        </div>
+      </div>
+
+      <div class="my-projects">
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/dashboard-finance.png" alt="dashboard-finance">
+          </div>
+          <div class="project-info">
+            <h3>Dashboard Finance App</h3>
+            <a href="projects/Dashboard-Finance-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap ">
+            <img src="static/img/to-do-list.png" alt="to-do-list">
+          </div>
+          <div class="project-info">
+            <h3>To-Do-List App</h3>
+            <a href="projects/To-Do-List-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/E-Learning.png" alt="e-learning">
+          </div>
+          <div class="project-info">
+            <h3>E-learning App</h3>
+            <a href="projects/E-learning-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/weather-app.png" alt="weather-app">
+          </div>
+          <div class="project-info">
+            <h3>Weather App</h3>
+            <a href="projects/Weather-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/calender.png" alt="calender">
+          </div>
+          <div class="project-info">
+            <h3>Calender App</h3>
+            <a href="projects/Calender-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/Speed-typing.png" alt="speed-typing">
+          </div>
+          <div class="project-info">
+            <h3>Speed Typing App</h3>
+            <a href="projects/Speed-Typing-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/chatting.png" alt="chat">
+          </div>
+          <div class="project-info">
+            <h3>Chatting App</h3>
+            <a href="projects/Real-Chat-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/ecommerce.png" alt="e-commerce">
+          </div>
+          <div class="project-info">
+            <h3>E-commerce App</h3>
+            <a href="projects/Bin-Shop-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/food.png" alt="food">
+          </div>
+          <div class="project-info">
+            <h3>Order Food App</h3>
+            <a href="projects/Bin-Resto-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/spotify.png" alt="spotify">
+          </div>
+          <div class="project-info">
+            <h3>Spotify App</h3>
+            <a href="projects/Spotify-Clone-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/youtube.png" alt="youtube">
+          </div>
+          <div class="project-info">
+            <h3>Youtube Clone</h3>
+            <a href="projects/Youtube-Clone-App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="boxs-project reveal">
+          <div class="project-img-wrap">
+            <img src="static/img/Screenshot 2026-06-23 170153.png" alt="watch">
+          </div>
+          <div class="project-info">
+            <h3>Custom Watch App</h3>
+            <a href="projects/Clock App/index.html" target="_blank" class="project-btn">View Project <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-footer reveal">
+        <button id="view-all-btn" class="btn-ghost">
+          <span class="btn-text">View All Projects</span>
+          <svg class="btn-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="services-inner">
+        <div class="services-left reveal">
+          <div class="section-eyebrow">What I Do</div>
+          <h2 class="section-title">Web Development<br>Skills & Services</h2>
+          <p class="services-desc">Even though I am still in the learning phase and haven't handled real-world clients yet, I focus on sharpening my core skills to build clean, responsive, and interactive websites using vanilla code.</p>
+
+          <div class="skills-bar-wrap">
+            <div class="skill-bar">
+              <div class="skill-bar-header"><span>HTML & CSS (Layouts)</span><span>85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-header"><span>JavaScript (DOM & Interaction)</span><span>75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-header"><span>Responsive Web Design</span><span>78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-right reveal reveal-delay-1">
+          <div class="accordion" id="accordion">
+            <div class="accordion-item active" data-index="0">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-icon-box">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </div>
+                  <div>
+                    <div class="accordion-title">Landing Page Creation</div>
+                    <div class="accordion-subtitle">Web profiles, school assignments, or personal portfolios</div>
+                  </div>
+                </div>
+                <div class="accordion-arrow">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  <p>Building clean and straightforward single-page websites for portfolios, simple store concepts, or school projects. My main focus is writing neat, structured, and easy-to-read code.</p>
+                  <!-- PAKE GAK YAA? -->
+                  <!-- <div class="accordion-techs">
+                    <span class="accordion-tech">HTML5</span>
+                    <span class="accordion-tech">CSS3</span>
+                    <span class="accordion-tech">Flexbox</span>
+                    <span class="accordion-tech">CSS Grid</span>
+                    <span class="accordion-tech">Semantic Tags</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-index="2">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-icon-box">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
+                  <div>
+                    <div class="accordion-title">Interactive Features (JavaScript)</div>
+                    <div class="accordion-subtitle">Animations, custom toggles, and form validation</div>
+                  </div>
+                </div>
+                <div class="accordion-arrow">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  <p>Bringing static websites to life using pure vanilla JavaScript. This includes creating interactive text typing effects, smooth accordion dropdowns, and button pop-up alerts.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-index="3">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-icon-box">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M12 7v5l3 3"/></svg>
+                  </div>
+                  <div>
+                    <div class="accordion-title">Mobile Responsive Tuning</div>
+                    <div class="accordion-subtitle">Ensuring layouts look clean on any phone screen</div>
+                  </div>
+                </div>
+                <div class="accordion-arrow">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <div class="accordion-body">
+                <div class="accordion-body-inner">
+                  <p>Restructuring web layouts using basic CSS Media Queries so the elements break down and shift smoothly. This guarantees the portfolio looks polished on phones, tablets, and laptops alike.</p>
+                  
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left reveal">
+          <div class="section-eyebrow">Get In Touch</div>
+          <h2 class="section-title contact-title">Hit Me Up!</h2>
+          <p class="contact-desc">Got a cool project idea or just wanna say hi? <br> Drop a message beside!</p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <div class="contact-info-val">bintang.aqilla11@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Location</div>
+                <div class="contact-info-val">Palembang, Indonesia</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="contact-info-label">Availability</div>
+                <div class="contact-info-val">Open to Projects — Response within 6h</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <div class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" placeholder="John" autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" placeholder="Doe" autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@company.com" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Project Inquiry / Collaboration..." />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me about your project, timeline, and budget..."></textarea>
+            </div>
+            <button type="button" class="form-submit" id="submitBtn" onclick="handleFormSubmit()">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Message sent! I'll get back to you within 24 hours.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="footer-logo">Bintang <span>.</span> Aqilla</a>
+        <p class="footer-copy">
+          &copy; 2026 Bintang Aqilla. Designed &amp; Built with love ❤️.<br>
+          <a href="#">Privacy</a> · <a href="#">Terms</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com/Bintangnuma" class="footer-social-link" aria-label="GitHub" target="_blank">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+          </a>
+          <a href="https://instagram.com/bintanganf1411" target="_blank" class="footer-social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://tiktok.com/@binanf1411" class="footer-social-link" aria-label="TikTok" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.03 1.64 4.14.99.98 2.33 1.57 3.72 1.68v3.91c-1.3-.12-2.52-.66-3.49-1.5-.54-.47-.98-1.05-1.32-1.7-.08 2.47-.04 4.94-.06 7.41-.05 1.57-.49 3.16-1.39 4.45-.96 1.34-2.43 2.3-4.04 2.65-1.42.32-2.94.19-4.28-.41-1.45-.64-2.66-1.83-3.28-3.29-.68-1.53-.74-3.32-.22-4.88.51-1.57 1.63-2.95 3.11-3.69 1.05-.53 2.23-.74 3.4-.64v3.98c-.76-.08-1.54.12-2.16.58-.69.49-1.12 1.28-1.15 2.13-.04.98.5 1.93 1.37 2.37.71.37 1.56.4 2.31.11.79-.29 1.39-.98 1.57-1.8.08-.43.08-.87.08-1.3V.02z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-up" class="btn-back">
+        <span class="up">↑</span>
+  </button>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>

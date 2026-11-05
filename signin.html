@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Bintang Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0c10; 
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .form-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            background: linear-gradient(135deg, #141820 0%, #0b0c10 100%);
+        }
+
+        .brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 3rem;
+        }
+
+        .brand span {
+            color: #38bdf8; 
+        }
+
+        .title-area h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .title-area p {
+            color: #c5c6c7;
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 16px;
+            background: #141820;
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #38bdf8;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #c5c6c7;
+        }
+
+        .forgot-btn {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .forgot-btn:hover {
+            text-decoration: underline;
+        }
+
+        .btn-submit {
+            text-decoration: none;
+            width: 100%;
+            padding: 14px;
+            background: #38bdf8;
+            color: #0b0c10;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .switch-page {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #c5c6c7;
+        }
+
+        .switch-page a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .showcase-side {
+            flex: 1.2;
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), #1f2833, #0b0c10);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            border-left: 1px solid rgba(102, 252, 241, 0.15);
+        }
+
+        .showcase-text h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .showcase-text h2 span {
+            color: #38bdf8;
+        }
+
+        .showcase-text p {
+            color: #c5c6c7;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 85%;
+        }
+
+        @media (max-width: 900px) {
+            .showcase-side { 
+                display: none; 
+            }
+
+            .form-side { 
+                padding: 0 5%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-side">
+        <div class="brand">Bintang<span>.</span>ANF</div>
+        
+        <div class="title-area">
+            <h1>Welcome Back</h1>
+            <p>Enter your credentials to access the console.</p>
+        </div>
+
+        <form action="#">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="name@domain.com" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-actions">
+                <label class="remember-me">
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#" class="forgot-btn">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-submit" id="signin-form">Sign In to Dashboard</a>
+        </form>
+
+        <div class="switch-page">
+            New to the platform? <a href="signup.html">Create an account</a>
+        </div>
+        </div>
+
+        <div class="showcase-side">
+            <div class="showcase-text">
+                <h2>Let's Have <br>A <span>Deal</span> With Me.</h2>
+                <p>A tailored, fast, and high-performance ecosystem crafted beautifully for advanced creative development.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('#signin-form');
+        const emailInput = document.querySelector('#email');
+        const passwordInput = document.querySelector('#password');
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+        function showError(inputElement, message) {
+            const parent = inputElement.parentElement;
+            const oldError = parent.querySelector('.error-message');
+            if (oldError) oldError.remove();
+            inputElement.classList.add('error-border');
+            const errorDiv = document.createElement('span');
+            errorDiv.className = 'error-message';
+            errorDiv.innerText = message;
+            parent.appendChild(errorDiv);
+        }
+        function clearError(inputElement) {
+            inputElement.classList.remove('error-border');
+            const parent = inputElement.parentElement;
+            const oldError = parent.querySelector('.error-message');
+            if (oldError) oldError.remove();
+        }
+        emailInput.addEventListener('input', () => clearError(emailInput));
+        passwordInput.addEventListener('input', () => clearError(passwordInput));
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let isValid = true;
+            if (!validateEmail(emailInput.value)) {
+                showError(emailInput, 'Wrong email form!');
+                isValid = false;
+            }
+            if (isValid) {
+                alert('Sign Up success!');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
